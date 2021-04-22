@@ -250,6 +250,7 @@ nav ul li a {
 
 .vcenter {
   align-items: center;
+  margin-left: 40px;
 }
 
 .theme-paddingg {
@@ -363,7 +364,7 @@ nav ul li a {
 .wave-top {
   /* top: 0; */
   height: 254px;
-  background: url('../../images/wave\ \(1\).png') center bottom no-repeat;
+  background: url('../../images/wave\ \(1\).png') center top no-repeat;
   background-size: cover;
 }
 
@@ -968,6 +969,11 @@ button.arrow {
   margin-top: 16px;
 }
 
+.portfolio-items .flexbox{
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 
 /* portfolio section2 ends */
 /* teams section starts */
@@ -980,7 +986,7 @@ button.arrow {
 }
 
 .teams-section {
-  background: url(../../images/teams/wave-bg.png) center bottom no-repeat;
+  background: url(../../images/teams/wave-bg.png)  center top no-repeat;
   width: 100%;
   min-height: 700px;
   padding-top: 250px;
@@ -988,6 +994,11 @@ button.arrow {
   flex-wrap: wrap;
   justify-content: space-around;
   background-size: cover;
+}
+
+.teams-section .wrapper.flexbox{
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .team-card {
@@ -1116,6 +1127,8 @@ p.member-role {
 }
 
 
+
+
 /* Responsive */
 
 @media only screen and (min-width:1500px){
@@ -1179,10 +1192,17 @@ p.member-role {
   }
   .footer-section{
     padding: 50px;
+    text-align: center;
+    overflow: hidden;
   }
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+}
   .footer-section .fsec1 {
-    margin-right: 42px;
+    margin-right:0;
     margin-left: 0;
+    width: 100%;
   }
   .faq-section{
     padding-bottom: 0;
@@ -1197,9 +1217,10 @@ p.member-role {
     margin-bottom: 20px;
   }
   .portfolio-items, .teams-section{
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 0;
+    padding-right:0;
   }
+ 
 
   .c-column{
     float: none;
@@ -1214,6 +1235,30 @@ p.member-role {
   }
   .testimonial-box.flexbox{
     flex-direction: column;
+  }
+  .wrapper{
+    display: block;
+  }
+  .vcenter{
+    margin-left: 0;
+  }
+  .fsec {
+    display: inline-block;
+    margin: 30px 0;
+    width: 49%;
+  }
+  .portfolio-items .theme-paddingg{
+    padding: 0;
+  }
+  .portfolio-items .wrapper{
+    display: flex;
+  }
+  .team-card{
+    width:100%;
+    min-width: 100%;
+  }
+  .team-card:nth-last-of-type(1), .team-card:nth-last-of-type(2){
+    margin-bottom: 100px;
   }
 }
 
@@ -1277,7 +1322,7 @@ p.member-role {
   }
   .team-card{
     width: 100%;
-    margin: 20px;
+    margin: 20px 0 20px 0;
   }
   .cheader{
     height: auto;
@@ -1299,9 +1344,9 @@ p.member-role {
   .faq-section .section-title{
     margin-bottom: 30px;
   }
-  .wave-bottom, .wave-top{
+  /* .wave-bottom, .wave-top{
     height: 98px;
-  }
+  } */
   .container3{
     margin-top: 10px;
   }
@@ -1323,7 +1368,7 @@ p.member-role {
     padding: 30px;
   }
   .teams-section{
-    padding-top: 100px;
+    padding-top:0;
     background-size: 812px 100%;
     background-position: -71px 0px;
   }
@@ -1348,6 +1393,7 @@ p.member-role {
    }
    .right-box #v111_41-Img{
      height: 450px;
+     top:0;
    }
    nav ul{
     display: none;
@@ -1392,4 +1438,16 @@ p.member-role {
   .testimonial-box.flexbox{
     flex-direction: column-reverse;
   }
+  .count-sec{
+    margin-bottom: 25px;
+  }
+  .wrapper{
+    display: block;
+  }
+  .vcenter{
+    margin-left: 0;
+  }
+  /* .portfolio-items .wrapper{
+    display: block;
+  } */
 }
